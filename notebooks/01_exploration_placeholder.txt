@@ -1,0 +1,4 @@
+
+# 01_exploration.ipynb (placeholder)
+# Silakan buat Jupyter Notebook baru dengan nama yang sama di lokal
+# dan gunakan fungsi-fungsi dari src/ untuk eksplorasi data.

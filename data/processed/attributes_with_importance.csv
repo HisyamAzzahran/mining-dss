@@ -1,0 +1,36 @@
+﻿attr_id,indicator_hint,initial_category,attr_text,source_literature,source_internal_doc,source_user_voice,freq_literature,source_diversity,importance_mean,importance_std
+A1,Accuracy,content,Jawaban AI faktual dan sesuai sumber terpercaya,1,1,1,8,3,4.6125,0.49025309919043125
+A2,Accuracy,content,Jawaban AI jarang mengandung informasi salah atau menyesatkan,1,0,0,8,1,4.6125,0.5394265590960718
+A3,Accuracy,content,AI konsisten ketika ditanya ulang tentang topik yang sama,1,0,0,6,1,4.575,0.5222880528277306
+A4,Accuracy,content,AI mampu mengutip referensi atau sumber jika diperlukan,1,1,1,8,3,4.5875,0.4953901416106939
+A5,Accuracy,governance,AI menghindari jawaban spekulatif pada topik sensitif terkait perusahaan,0,1,1,0,2,4.5625,0.5239516356074253
+R1,Relevance,content,Jawaban AI relevan dengan pertanyaan yang diajukan,0,0,1,0,1,4.4625,0.5498849131604895
+R2,Relevance,context,AI memahami konteks bisnis Astra International,0,1,1,0,2,4.3875,0.5844774795068095
+R3,Relevance,context,AI menyesuaikan jawaban dengan konteks Knowledge Management Astra,1,0,0,6,1,4.475,0.5271129871913827
+R4,Relevance,context,AI mampu mengaitkan jawaban dengan proses kerja di unit terkait,1,1,1,8,3,4.45,0.525308830202394
+R5,Relevance,context,AI tidak keluar topik ketika diberi pertanyaan yang spesifik,1,0,0,4,1,4.5625,0.49920823386588253
+C1,Clarity,style,Bahasa yang digunakan AI jelas dan mudah dipahami,0,1,1,2,2,4.1125,0.6363215093733193
+C2,Clarity,style,Struktur jawaban AI rapi dan terorganisir,1,0,1,7,2,4.1375,0.5452615212742217
+C3,Clarity,style,Istilah teknis dijelaskan dengan cara yang sederhana,1,1,1,5,3,4.1,0.4666063854978217
+C4,Clarity,style,AI menggunakan contoh yang membantu pemahaman,0,1,0,0,1,4.0875,0.5779437579399679
+C5,Clarity,style,AI meminimalkan ambiguitas dalam penjelasan,0,0,1,0,1,4.125,0.4604620684222493
+CC1,Conciseness_Coherence,style,Jawaban AI tidak bertele-tele,0,1,1,2,2,3.9,0.49298881801065664
+CC2,Conciseness_Coherence,style,Paragraf dalam jawaban AI saling terhubung dengan logis,1,1,1,7,3,3.8375,0.5612767994221926
+CC3,Conciseness_Coherence,style,AI mampu merangkum poin penting dengan singkat,1,1,1,2,3,3.9,0.5647896438251607
+CC4,Conciseness_Coherence,style,AI membatasi informasi yang tidak relevan,1,1,1,6,3,3.95,0.5488768739752204
+CC5,Conciseness_Coherence,style,AI menjaga alur penjelasan tetap runtut dari awal sampai akhir,1,1,1,7,3,3.9375,0.5117295072668714
+CP1,Completeness,coverage,AI menjawab seluruh poin penting dalam pertanyaan,1,1,0,5,2,4.375,0.5366327268666194
+CP2,Completeness,coverage,AI memberikan langkah atau rekomendasi yang bisa dipraktikkan,0,0,1,0,1,4.4375,0.49920823386588253
+CP3,Completeness,coverage,AI menambahkan konteks tambahan yang relevan jika diperlukan,1,0,1,5,2,4.3625,0.5335277862812556
+CP4,Completeness,coverage,AI memberikan alternatif solusi ketika memungkinkan,1,0,1,5,2,4.3625,0.5092498827078654
+CP5,Completeness,coverage,AI menyertakan risiko atau catatan penting terkait rekomendasi,1,0,1,5,2,4.3625,0.5335277862812556
+T1,Tone_Appropriateness,tone,Nada jawaban AI profesional dan sopan,1,1,1,7,3,4.225,0.5731326309487428
+T2,Tone_Appropriateness,tone,AI menghargai nilai dan budaya perusahaan Astra,0,0,1,2,1,4.3125,0.5178766286787284
+T3,Tone_Appropriateness,tone,AI menghindari konten yang sensitif atau ofensif,1,1,1,4,3,4.2125,0.5668869018540391
+T4,Tone_Appropriateness,tone,AI memberikan respon yang suportif dan tidak menyalahkan,1,1,0,3,2,4.2125,0.5887930155749755
+T5,Tone_Appropriateness,tone,AI menyesuaikan gaya bahasa dengan audiens internal Astra,0,0,0,0,0,4.1875,0.4798140462589041
+RT1,Responsiveness,performance,Waktu respon AI tergolong cepat,1,1,0,5,2,4.1875,0.4798140462589041
+RT2,Responsiveness,performance,Waktu respon AI stabil dan tidak sering mengalami keterlambatan,0,0,1,0,1,4.2875,0.5323401881779799
+RT3,Responsiveness,usability,Pengguna dapat mengatur panjang atau detail jawaban AI,0,1,1,0,2,4.3375,0.5498849131604895
+RT4,Responsiveness,usability,Pengguna dapat mengoreksi atau mengarahkan ulang jawaban AI dengan mudah,1,0,1,7,2,4.25,0.5846128222154678
+RT5,Responsiveness,usability,AI dapat menangani beberapa pertanyaan berurutan tanpa penurunan kualitas,1,1,1,2,3,4.3125,0.5417680852798992
