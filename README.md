@@ -3,7 +3,7 @@
 
 Proyek ini menganalisis atribut kualitas Gen-AI di KM Astra dan menghasilkan bobot indikator berbasis data. Hasilnya jadi fondasi untuk membangun Decision Support System (DSS) penilaian Gen-AI yang objektif.
 
-## 📋 Apa Itu Proyek Ini?
+## 📋 Untuk Apa Proyek Ini?
 
 Kita punya 35 atribut kualitas Gen-AI dari berbagai sumber (literatur, internal doc, user voice). Dari sini, kita ekstrak 7 indikator utama dan hitung bobotnya berdasarkan tingkat kepentingan menurut responden (HC, line manager, staff, KM specialist, IT data).
 
