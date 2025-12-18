@@ -1,62 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350">
   <defs>
-    <linearGradient id="rankBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="rankBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a1a2e"/>
       <stop offset="100%" style="stop-color:#16213e"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#ffd700"/>
       <stop offset="100%" style="stop-color:#ffec8b"/>
     </linearGradient>
-    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#c0c0c0"/>
       <stop offset="100%" style="stop-color:#e8e8e8"/>
     </linearGradient>
-    <linearGradient id="bronze" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#cd7f32"/>
       <stop offset="100%" style="stop-color:#daa06d"/>
     </linearGradient>
-    <linearGradient id="fourth" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fourthGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#667eea"/>
       <stop offset="100%" style="stop-color:#764ba2"/>
     </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="500" height="350" fill="url(#rankBg)" rx="16"/>
+  <rect width="500" height="350" fill="url(#rankBgGrad)" rx="16"/>
   
   <!-- Title -->
   <text x="250" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Final Ranking - Metode SAW</text>
   
   <!-- Podium visualization -->
-  <!-- 2nd Place - ChatGPT -->
+  <!-- 2nd Place - Perplexity -->
   <g transform="translate(100, 230)">
     <rect x="-45" y="0" width="90" height="100" fill="rgba(192, 192, 192, 0.3)" rx="8"/>
-    <rect x="-45" y="0" width="90" height="8" fill="url(#silver)" rx="4"/>
-    <text x="0" y="-20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ChatGPT</text>
-    <text x="0" y="-5" text-anchor="middle" fill="#c0c0c0" font-family="Arial, sans-serif" font-size="24" font-weight="bold">84%</text>
-    <text x="0" y="45" text-anchor="middle" fill="#c0c0c0" font-family="Arial, sans-serif" font-size="30">🥈</text>
+    <rect x="-45" y="0" width="90" height="8" fill="url(#silverGrad)" rx="4"/>
+    <text x="0" y="-20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Perplexity</text>
+    <text x="0" y="-5" text-anchor="middle" fill="#c0c0c0" font-family="Arial, sans-serif" font-size="24" font-weight="bold">85%</text>
+    <text x="0" y="45" text-anchor="middle" fill="#c0c0c0" font-family="Arial, sans-serif" font-size="30">2</text>
     <text x="0" y="80" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">2nd</text>
   </g>
   
-  <!-- 1st Place - Perplexity -->
+  <!-- 1st Place - ChatGPT -->
   <g transform="translate(250, 180)">
     <rect x="-50" y="0" width="100" height="150" fill="rgba(255, 215, 0, 0.3)" rx="8"/>
-    <rect x="-50" y="0" width="100" height="8" fill="url(#gold)" rx="4"/>
-    <text x="0" y="-25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Perplexity</text>
-    <text x="0" y="-5" text-anchor="middle" fill="#ffd700" font-family="Arial, sans-serif" font-size="28" font-weight="bold">85%</text>
-    <text x="0" y="55" text-anchor="middle" fill="#ffd700" font-family="Arial, sans-serif" font-size="40">🥇</text>
-    <text x="0" y="100" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="11">RECOMMENDED</text>
+    <rect x="-50" y="0" width="100" height="8" fill="url(#goldGrad)" rx="4"/>
+    <text x="0" y="-25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ChatGPT</text>
+    <text x="0" y="-5" text-anchor="middle" fill="#ffd700" font-family="Arial, sans-serif" font-size="28" font-weight="bold">88%</text>
+    <text x="0" y="55" text-anchor="middle" fill="#ffd700" font-family="Arial, sans-serif" font-size="40">1</text>
+    <text x="0" y="100" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">RECOMMENDED</text>
     <text x="0" y="130" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">1st</text>
   </g>
   
   <!-- 3rd Place - Gemini -->
   <g transform="translate(400, 260)">
     <rect x="-45" y="0" width="90" height="70" fill="rgba(205, 127, 50, 0.3)" rx="8"/>
-    <rect x="-45" y="0" width="90" height="8" fill="url(#bronze)" rx="4"/>
+    <rect x="-45" y="0" width="90" height="8" fill="url(#bronzeGrad)" rx="4"/>
     <text x="0" y="-20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Gemini</text>
     <text x="0" y="-5" text-anchor="middle" fill="#cd7f32" font-family="Arial, sans-serif" font-size="24" font-weight="bold">82%</text>
-    <text x="0" y="35" text-anchor="middle" fill="#cd7f32" font-family="Arial, sans-serif" font-size="26">🥉</text>
+    <text x="0" y="35" text-anchor="middle" fill="#cd7f32" font-family="Arial, sans-serif" font-size="26">3</text>
     <text x="0" y="55" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">3rd</text>
   </g>
   
@@ -65,10 +65,10 @@
     <rect x="130" y="0" width="100" height="50" fill="rgba(102, 126, 234, 0.2)" rx="8"/>
     <text x="180" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">DeepSeek</text>
     <text x="180" y="38" text-anchor="middle" fill="#667eea" font-family="Arial, sans-serif" font-size="16" font-weight="bold">80%</text>
-    <text x="100" y="30" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="18">4️⃣</text>
+    <text x="100" y="30" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="18">4th</text>
   </g>
   
   <!-- Score comparison line -->
   <line x1="50" y1="330" x2="450" y2="330" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-  <text x="250" y="345" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">Score range: 80% - 85% (selisih kompetitif)</text>
+  <text x="250" y="345" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">Score range: 80% - 88% | ChatGPT unggul di Accuracy, Clarity, Coherence</text>
 </svg>
