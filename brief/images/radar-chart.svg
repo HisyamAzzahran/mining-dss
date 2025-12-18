@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450">
+  <defs>
+    <linearGradient id="chartBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="450" fill="url(#chartBg)" rx="16"/>
+  
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Radar Chart - Perbandingan 4 GenAI</text>
+  
+  <!-- Radar Grid -->
+  <g transform="translate(250, 220)">
+    <!-- Grid circles -->
+    <circle cx="0" cy="0" r="150" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    
+    <!-- Axis lines -->
+    <line x1="0" y1="0" x2="0" y2="-150" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="129.9" y2="-75" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="129.9" y2="75" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="0" y2="150" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="-129.9" y2="75" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="-129.9" y2="-75" stroke="rgba(255,255,255,0.2)"/>
+    <line x1="0" y1="0" x2="0" y2="-150" stroke="rgba(255,255,255,0.2)"/>
+    
+    <!-- Axis Labels -->
+    <text x="0" y="-165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Accuracy</text>
+    <text x="145" y="-75" text-anchor="start" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Relevance</text>
+    <text x="145" y="85" text-anchor="start" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Clarity</text>
+    <text x="0" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Coherence</text>
+    <text x="-145" y="85" text-anchor="end" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Completeness</text>
+    <text x="-145" y="-55" text-anchor="end" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Appropriateness</text>
+    <text x="-75" y="-135" text-anchor="end" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Response Time</text>
+    
+    <!-- Perplexity (Winner) - Green -->
+    <polygon points="0,-150, 129.9,-75, 104,-60, 0,120, -104,60, -104,-60, -52,-104" 
+             fill="rgba(34, 197, 94, 0.3)" stroke="#22c55e" stroke-width="2"/>
+    
+    <!-- ChatGPT - Blue -->
+    <polygon points="0,-120, 104,-60, 129.9,75, 0,150, -78,45, -104,-60, -78,-104" 
+             fill="rgba(102, 126, 234, 0.2)" stroke="#667eea" stroke-width="2"/>
+    
+    <!-- Gemini - Purple -->
+    <polygon points="0,-120, 104,-60, 104,60, 0,120, -104,60, -78,-45, -52,-104" 
+             fill="rgba(240, 147, 251, 0.2)" stroke="#f093fb" stroke-width="2"/>
+    
+    <!-- DeepSeek - Cyan -->
+    <polygon points="0,-90, 78,-45, 78,45, 0,120, -78,45, -78,-45, 0,-150" 
+             fill="rgba(34, 211, 238, 0.2)" stroke="#22d3ee" stroke-width="2"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="20" height="12" fill="#22c55e" rx="2"/>
+    <text x="28" y="10" fill="white" font-family="Arial, sans-serif" font-size="11">Perplexity (85%)</text>
+    
+    <rect x="130" y="0" width="20" height="12" fill="#667eea" rx="2"/>
+    <text x="158" y="10" fill="white" font-family="Arial, sans-serif" font-size="11">ChatGPT (84%)</text>
+    
+    <rect x="260" y="0" width="20" height="12" fill="#f093fb" rx="2"/>
+    <text x="288" y="10" fill="white" font-family="Arial, sans-serif" font-size="11">Gemini (82%)</text>
+    
+    <rect x="375" y="0" width="20" height="12" fill="#22d3ee" rx="2"/>
+    <text x="403" y="10" fill="white" font-family="Arial, sans-serif" font-size="11">DeepSeek (80%)</text>
+  </g>
+  
+  <!-- Score indicators -->
+  <g transform="translate(250, 220)">
+    <text x="15" y="-155" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">5</text>
+    <text x="15" y="-125" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">4</text>
+    <text x="15" y="-95" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">3</text>
+    <text x="15" y="-65" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">2</text>
+    <text x="15" y="-35" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="9">1</text>
+  </g>
+</svg>

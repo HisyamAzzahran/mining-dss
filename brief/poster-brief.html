@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brief Poster - GenAI DSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            border: 2px dashed rgba(255,255,255,0.2);
+        }
+
+        .main-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title .icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        /* Problem Solution Grid */
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .problem-solution-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .problem-card { border-left: 4px solid #ef4444; }
+        .solution-card { border-left: 4px solid #22c55e; }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .problem-card .card-title { color: #ef4444; }
+        .solution-card .card-title { color: #22c55e; }
+
+        /* Stats */
+        .stat-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #f093fb;
+            min-width: 80px;
+        }
+
+        .stat-text {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.5;
+        }
+
+        .stat-source {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Solution Steps */
+        .solution-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .profile-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+
+        .profile-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .profile-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 5px;
+        }
+
+        /* Flow Steps */
+        .flow-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 180px;
+            position: relative;
+        }
+
+        .flow-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -18px;
+            top: 45px;
+            font-size: 1.5rem;
+            color: #667eea;
+        }
+
+        .flow-card {
+            background: linear-gradient(145deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.1));
+            border-radius: 20px;
+            padding: 20px 15px;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            height: 100%;
+        }
+
+        .flow-number {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin: 0 auto 12px;
+        }
+
+        .flow-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f093fb;
+        }
+
+        .flow-desc {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+        }
+
+        .flow-output {
+            margin-top: 12px;
+            padding: 8px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            font-size: 0.7rem;
+            color: #22c55e;
+            font-family: monospace;
+        }
+
+        /* Method Grid */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .method-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            gap: 12px;
+        }
+
+        .method-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .method-content h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 4px;
+        }
+
+        .method-content .algo {
+            font-size: 0.8rem;
+            color: #f093fb;
+            font-weight: 500;
+        }
+
+        .method-content p {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+        }
+
+        /* Results */
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .results-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Winner */
+        .winner-card {
+            background: linear-gradient(145deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.1));
+            border-radius: 24px;
+            padding: 30px;
+            border: 2px solid rgba(34, 197, 94, 0.5);
+            text-align: center;
+        }
+
+        .winner-badge { font-size: 3rem; margin-bottom: 10px; }
+
+        .winner-name {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #22c55e, #86efac);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .winner-score {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 10px 0 20px;
+        }
+
+        .winner-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* Ranking */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ranking-item.gold {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .ranking-item.silver {
+            background: linear-gradient(145deg, rgba(192, 192, 192, 0.15), rgba(192, 192, 192, 0.05));
+            border-color: rgba(192, 192, 192, 0.3);
+        }
+
+        .ranking-item.bronze {
+            background: linear-gradient(145deg, rgba(205, 127, 50, 0.15), rgba(205, 127, 50, 0.05));
+            border-color: rgba(205, 127, 50, 0.3);
+        }
+
+        .rank-medal { font-size: 1.8rem; }
+
+        .rank-info { flex: 1; }
+
+        .rank-name { font-weight: 700; }
+
+        .rank-score-bar {
+            margin-top: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .rank-score-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #667eea, #f093fb);
+        }
+
+        .rank-score {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #f093fb;
+        }
+
+        /* Weights */
+        .weights-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .weight-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 25px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            font-size: 0.85rem;
+        }
+
+        .weight-chip .value {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* Insights */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .insight-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            padding: 18px;
+            border-left: 3px solid #667eea;
+        }
+
+        .insight-card .genai { color: #f093fb; font-weight: 700; }
+        .insight-card .strength { color: #22c55e; font-weight: 600; }
+
+        /* Recommendation */
+        .recommendation-box {
+            background: linear-gradient(145deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.1));
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 25px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .recommendation-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f093fb;
+            margin-bottom: 12px;
+        }
+
+        .recommendation-box p {
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        /* Team */
+        .team-section {
+            background: rgba(255,255,255,0.03);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .team-member { text-align: center; }
+
+        .member-photo {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(145deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            border: 3px solid rgba(102, 126, 234, 0.5);
+        }
+
+        .member-name { font-weight: 700; margin-bottom: 3px; }
+
+        .member-npm {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .supervisor {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .supervisor-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 8px;
+        }
+
+        .supervisor-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .supervisor-nip {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 3px;
+        }
+
+        .qr-section {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 25px;
+        }
+
+        .qr-item { text-align: center; }
+
+        .qr-placeholder {
+            width: 90px;
+            height: 90px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 0.65rem;
+        }
+
+        .qr-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Image Note */
+        .image-note {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px dashed rgba(255, 193, 7, 0.5);
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #ffc107;
+        }
+
+        .image-note strong { color: #ffeb3b; }
+
+        /* Chart Container */
+        .chart-container {
+            background: rgba(0,0,0,0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .chart-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logos">
+                <div class="logo-placeholder">Logo<br>UNPAD</div>
+                <div class="logo-placeholder">Logo<br>HIMATIF</div>
+            </div>
+            <h1 class="main-title">Smart GenAI Selection:<br>Sistem Pendukung Keputusan Berbasis Data Mining untuk Pemilihan Generative AI pada E-Learning Corporate</h1>
+            <p class="subtitle">Studi Kasus: PT Astra International - Human Capital Development</p>
+        </header>
+
+        <!-- Problem & Solution -->
+        <section class="section">
+            <div class="problem-solution-grid">
+                <div class="card problem-card">
+                    <h2 class="card-title">❌ Problem</h2>
+                    <div class="stat-item">
+                        <span class="stat-number">70%</span>
+                        <div>
+                            <p class="stat-text">Transformasi digital perusahaan <strong>gagal</strong> mencapai target</p>
+                            <p class="stat-source">McKinsey Digital Transformation Report, 2023</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20%</span>
+                        <div>
+                            <p class="stat-text">Total pengeluaran perusahaan untuk <strong>R&D transformasi digital</strong></p>
+                            <p class="stat-source">Deloitte Digital Investment Survey, 2024</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30%</span>
+                        <div>
+                            <p class="stat-text">Perusahaan yang <strong>berhasil</strong> implementasi AI untuk L&D</p>
+                            <p class="stat-source">Gartner AI Adoption Report, 2024</p>
+                        </div>
+                    </div>
+                    <div class="image-note">
+                        📷 <strong>Gambar:</strong> Gunakan file <code>images/problem-illustration.svg</code>
+                    </div>
+                </div>
+
+                <div class="card solution-card">
+                    <h2 class="card-title">✅ Solution</h2>
+                    <p style="margin-bottom: 20px; color: rgba(255,255,255,0.8);">
+                        Membangun <strong>DSS berbasis Data Mining</strong> untuk pemilihan GenAI optimal:
+                    </p>
+                    <div class="solution-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Indicator Extraction</h4>
+                            <p>Ekstrak 35 atribut dari 3 sumber data</p>
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Topic Clustering</h4>
+                            <p>Kelompokkan menjadi 7 indikator utama</p>
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Weighted Scoring</h4>
+                            <p>Pembobotan sesuai kebutuhan HCD</p>
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>SAW Method</h4>
+                            <p>Ranking 4 GenAI dengan metode SAW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Data -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon">📊</span> Profile Data</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <div class="profile-icon">📄</div>
+                    <div class="profile-number">35</div>
+                    <div class="profile-label">Atribut Evaluasi</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">📚</div>
+                    <div class="profile-number">3</div>
+                    <div class="profile-label">Sumber Data</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">🎯</div>
+                    <div class="profile-number">7</div>
+                    <div class="profile-label">Indikator Final</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">🤖</div>
+                    <div class="profile-number">4</div>
+                    <div class="profile-label">GenAI Models</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">⚖️</div>
+                    <div class="profile-number">SAW</div>
+                    <div class="profile-label">Metode DSS</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">🎓</div>
+                    <div class="profile-number">HCD</div>
+                    <div class="profile-label">Target User</div>
+                </div>
+            </div>
+
+            <!-- Data Source Chart -->
+            <div class="chart-container">
+                <div class="chart-title">📈 Distribusi Sumber Data Atribut</div>
+                <img src="images/data-source-chart.svg" alt="Data Source Chart" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+            </div>
+
+            <!-- Clustering Diagram -->
+            <div class="chart-container" style="margin-top: 20px;">
+                <div class="chart-title">🔍 Proses Clustering Atribut ke Indikator</div>
+                <img src="images/clustering-diagram.svg" alt="Clustering Diagram" style="width: 100%; max-width: 500px; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔄</span> Tahapan Analisis</h2>
+            
+            <!-- Process Flow Image -->
+            <div class="chart-container" style="margin-bottom: 25px;">
+                <img src="images/process-flow.svg" alt="Process Flow" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+            </div>
+            
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="flow-card">
+                        <div class="flow-number">1</div>
+                        <div class="flow-title">Data Collection</div>
+                        <div class="flow-desc">Pengumpulan 35 atribut dari Literature, Internal, User Voice</div>
+                        <div class="flow-output">→ raw_attributes.csv</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-card">
+                        <div class="flow-number">2</div>
+                        <div class="flow-title">Clustering</div>
+                        <div class="flow-desc">Klasifikasi atribut ke 7 indikator dengan semantic grouping</div>
+                        <div class="flow-output">→ indicators.json</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-card">
+                        <div class="flow-number">3</div>
+                        <div class="flow-title">Weighting</div>
+                        <div class="flow-desc">Penentuan bobot via expert voting untuk HCD</div>
+                        <div class="flow-output">→ weights_hcd.csv</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-card">
+                        <div class="flow-number">4</div>
+                        <div class="flow-title">Evaluation</div>
+                        <div class="flow-desc">Penilaian 4 GenAI berdasarkan 7 indikator (1-5)</div>
+                        <div class="flow-output">→ genai_scores.csv</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-card">
+                        <div class="flow-number">5</div>
+                        <div class="flow-title">SAW Ranking</div>
+                        <div class="flow-desc">Kalkulasi final score dengan Simple Additive Weighting</div>
+                        <div class="flow-output">→ final_ranking.csv</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔬</span> Metodologi</h2>
+            <!-- Method Grid -->
+            <div class="method-grid">
+                <div class="method-card">
+                    <div class="method-icon">📥</div>
+                    <div class="method-content">
+                        <h4>Data Collection</h4>
+                        <div class="algo">Literature Review + Survey</div>
+                        <p>Data komprehensif dari multiple sources</p>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🔍</div>
+                    <div class="method-content">
+                        <h4>Attribute Extraction</h4>
+                        <div class="algo">Content Analysis</div>
+                        <p>Identifikasi atribut evaluasi GenAI</p>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">📊</div>
+                    <div class="method-content">
+                        <h4>Clustering</h4>
+                        <div class="algo">Semantic Grouping</div>
+                        <p>Pengelompokan atribut ke indikator</p>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">⚖️</div>
+                    <div class="method-content">
+                        <h4>Weighting</h4>
+                        <div class="algo">Expert Voting + AHP</div>
+                        <p>Bobot objektif per department</p>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">📐</div>
+                    <div class="method-content">
+                        <h4>Normalization</h4>
+                        <div class="algo">Min-Max Scaling</div>
+                        <p>Standarisasi skala (1-5 → 0-1)</p>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🏆</div>
+                    <div class="method-content">
+                        <h4>Decision Method</h4>
+                        <div class="algo">SAW (Simple Additive Weighting)</div>
+                        <p>Transparan & mudah diinterpretasi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAW Method Diagram -->
+            <div class="chart-container" style="margin-top: 25px;">
+                <div class="chart-title">📐 Ilustrasi Metode SAW</div>
+                <img src="images/saw-method.svg" alt="SAW Method" style="width: 100%; max-width: 500px; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🏆</span> Result & Conclusion</h2>
+            
+            <div class="results-grid">
+                <!-- Winner -->
+                <div class="winner-card">
+                    <div class="winner-badge">🥇</div>
+                    <div class="winner-name">Perplexity</div>
+                    <div class="winner-score">85.0%</div>
+                    <div class="winner-label">🎯 RECOMMENDED</div>
+                    <p style="margin-top: 20px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        Unggul di Accuracy & Relevance - cocok untuk e-learning berbasis research
+                    </p>
+                </div>
+
+                <!-- Ranking -->
+                <div class="ranking-list">
+                    <div class="ranking-item gold">
+                        <span class="rank-medal">🥇</span>
+                        <div class="rank-info">
+                            <div class="rank-name">Perplexity</div>
+                            <div class="rank-score-bar"><div class="rank-score-fill" style="width: 85%"></div></div>
+                        </div>
+                        <span class="rank-score">85.0%</span>
+                    </div>
+                    <div class="ranking-item silver">
+                        <span class="rank-medal">🥈</span>
+                        <div class="rank-info">
+                            <div class="rank-name">ChatGPT</div>
+                            <div class="rank-score-bar"><div class="rank-score-fill" style="width: 84%"></div></div>
+                        </div>
+                        <span class="rank-score">84.0%</span>
+                    </div>
+                    <div class="ranking-item bronze">
+                        <span class="rank-medal">🥉</span>
+                        <div class="rank-info">
+                            <div class="rank-name">Gemini</div>
+                            <div class="rank-score-bar"><div class="rank-score-fill" style="width: 82%"></div></div>
+                        </div>
+                        <span class="rank-score">82.0%</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-medal">4️⃣</span>
+                        <div class="rank-info">
+                            <div class="rank-name">DeepSeek</div>
+                            <div class="rank-score-bar"><div class="rank-score-fill" style="width: 80%"></div></div>
+                        </div>
+                        <span class="rank-score">80.0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weights Used -->
+            <div style="margin-top: 30px;">
+                <h3 style="font-size: 1rem; margin-bottom: 15px; color: rgba(255,255,255,0.8);">⚖️ Bobot Indikator (HCD Department)</h3>
+                <div class="weights-grid">
+                    <div class="weight-chip"><span>🎯 Accuracy</span><span class="value">20%</span></div>
+                    <div class="weight-chip"><span>⚡ Response Time</span><span class="value">20%</span></div>
+                    <div class="weight-chip"><span>🔗 Relevance</span><span class="value">15%</span></div>
+                    <div class="weight-chip"><span>📦 Completeness</span><span class="value">15%</span></div>
+                    <div class="weight-chip"><span>💡 Clarity</span><span class="value">10%</span></div>
+                    <div class="weight-chip"><span>🔄 Coherence</span><span class="value">10%</span></div>
+                    <div class="weight-chip"><span>🤝 Appropriateness</span><span class="value">10%</span></div>
+                </div>
+
+                <!-- Weight Distribution Chart -->
+                <div class="chart-container" style="margin-top: 20px;">
+                    <img src="images/weight-distribution.svg" alt="Weight Distribution" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <div class="chart-title">📊 Perbandingan Score per Indikator</div>
+                <img src="images/radar-chart.svg" alt="Radar Chart" style="width: 100%; max-width: 500px; display: block; margin: 0 auto;">
+            </div>
+
+            <!-- Ranking Podium -->
+            <div class="chart-container" style="margin-top: 20px;">
+                <div class="chart-title">🏆 Final Ranking Podium</div>
+                <img src="images/ranking-podium.svg" alt="Ranking Podium" style="width: 100%; max-width: 500px; display: block; margin: 0 auto;">
+            </div>
+
+            <!-- Insights -->
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <p><span class="genai">Perplexity</span> unggul di <span class="strength">Accuracy (5/5)</span> dan <span class="strength">Relevance (5/5)</span> - ideal untuk research-based learning</p>
+                </div>
+                <div class="insight-card">
+                    <p><span class="genai">ChatGPT</span> unggul di <span class="strength">Clarity (5/5)</span> dan <span class="strength">Coherence (5/5)</span> - excellent untuk penjelasan konsep</p>
+                </div>
+                <div class="insight-card">
+                    <p><span class="genai">DeepSeek</span> unggul di <span class="strength">Response Time (5/5)</span> - optimal untuk real-time interaction</p>
+                </div>
+                <div class="insight-card">
+                    <p><span class="genai">Gemini</span> memiliki <span class="strength">balance score</span> di semua indikator - versatile untuk berbagai use case</p>
+                </div>
+            </div>
+
+            <!-- Recommendation -->
+            <div class="recommendation-box">
+                <h3>💡 Rekomendasi untuk PT Astra International (HCD)</h3>
+                <p>
+                    Untuk implementasi e-learning, disarankan menggunakan <span class="highlight">Perplexity</span> sebagai primary GenAI dengan pertimbangan: skor tertinggi pada <strong>Accuracy</strong> (konten pembelajaran harus akurat) dan <strong>Relevance</strong> (materi sesuai kebutuhan). Alternatif: <span class="highlight">ChatGPT</span> untuk skenario yang membutuhkan penjelasan lebih detail dan interaktif.
+                </p>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon">👥</span> Tim Peneliti</h2>
+            <div class="team-section">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">Foto 1</div>
+                        <div class="member-name">[Nama Anggota 1]</div>
+                        <div class="member-npm">140810230XXX</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">Foto 2</div>
+                        <div class="member-name">[Nama Anggota 2]</div>
+                        <div class="member-npm">140810230XXX</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">Foto 3</div>
+                        <div class="member-name">[Nama Anggota 3]</div>
+                        <div class="member-npm">140810230XXX</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">Foto 4</div>
+                        <div class="member-name">[Nama Anggota 4]</div>
+                        <div class="member-npm">140810230XXX</div>
+                    </div>
+                </div>
+
+                <div class="supervisor">
+                    <div class="supervisor-label">Dosen Pembimbing</div>
+                    <div class="supervisor-name">[Nama Dosen Pembimbing]</div>
+                    <div class="supervisor-nip">NIP: XXXXXXXXXXXX</div>
+                </div>
+
+                <div class="qr-section">
+                    <div class="qr-item">
+                        <div class="qr-placeholder">QR Code</div>
+                        <div class="qr-label">Demo Web App</div>
+                    </div>
+                    <div class="qr-item">
+                        <div class="qr-placeholder">QR Code</div>
+                        <div class="qr-label">GitHub Repo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
