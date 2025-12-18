@@ -127,7 +127,7 @@ export const DEFAULT_GENAI_MODELS: GenAIModel[] = [
     color: '#10a37f',
     description: 'OpenAI\'s flagship model, dikenal dengan kemampuan conversational yang kuat',
     scores: {
-      accuracy: 4,
+      accuracy: 5,
       relevance: 4,
       clarity: 5,
       coherence: 5,
